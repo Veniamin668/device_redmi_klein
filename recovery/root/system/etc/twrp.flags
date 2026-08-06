@@ -1,0 +1,66 @@
+# mount point       fstype    device                                                                flags
+
+## User-writable / Storage partitions
+/boot			        emmc	/dev/block/by-name/boot			flags=display="boot";backup=1;flashimg=1;slotselect
+/dtbo			        emmc 	/dev/block/by-name/dtbo 		        flags=display="dtbo";backup=1;flashimg=1;slotselect
+/dtb			        emmc 	/dev/block/by-name/dtb 		        flags=display="dtbo";backup=1;flashimg=1;slotselect
+/vendor_boot        emmc      /dev/block/by-name/vendor_boot                    flags=display="Vendor Boot";flashimg=1;backup=1;slotselect
+
+
+# VERIFY BOOT
+
+/vbmeta                         emmc    /dev/block/by-name/vbmeta                   flags=display="VBMeta";backup=1;flashimg=1;slotselect
+/vbmeta_system                  emmc    /dev/block/by-name/vbmeta_system            flags=display="VBMeta_system";backup=1;flashimg=1;slotselect
+/vbmeta_vendor                  emmc    /dev/block/by-name/vbmeta_vendor            flags=display="VBMeta_vendor";backup=1;flashimg=1;slotselect
+
+/vbmeta_odm                  emmc    /dev/block/by-name/vbmeta_odm            flags=display="VBMeta_vendor";backup=1;flashimg=1;slotselect
+
+/vbmeta_product                  emmc    /dev/block/by-name/vbmeta_product            flags=display="VBMeta_vendor";backup=1;flashimg=1;slotselect
+
+## Firmware
+
+
+/misc emmc /dev/block/by-name/misc  
+
+/persist emmc /dev/block/by-name/persist flags=display="Persist";flashimg
+/logo emmc /dev/block/by-name/logo flags=display="logo";
+/fbootlogo emmc /dev/block/by-name/fbootlogo flags=display="fbootlogo"
+/tranfs ext4 /dev/block/by-name/tranfs flags=display="tranfs"
+/miscdata emmc /dev/block/by-name/miscdata flags=display="miscdata"
+
+
+
+/system_image_a           emmc      /dev/block/mapper/system_a                                flags=display="System Image A";flashimg=1
+/vendor_image_a           emmc      /dev/block/mapper/vendor_a                                  flags=display="Vendor Image A";flashimg=1
+/product_image_a          emmc      /dev/block/mapper/product_a                                 flags=display="Product Image A";flashimg=1
+/system_ext_image_a       emmc      /dev/block/mapper/system_ext_a                            flags=display="System_EXT Image A";flashimg=1
+/vendor_dlkm_image_a       emmc      /dev/block/mapper/vendor_dlkm_a                            flags=display="Vndor_dlkm Image A";flashimg=1
+/odm_image_a       emmc      /dev/block/mapper/odm_a                            flags=display="Odm Image A";flashimg=1
+
+
+/system_image_b           emmc         /dev/block/mapper/system_b                             flags=display="System Image B";flashimg=1
+/vendor_image_b           emmc          /dev/block/mapper/vendor_b                           flags=display="Vendor Image B";flashimg=1
+/product_image_b          emmc         /dev/block/mapper/product_b                           flags=display="Product Image B";flashimg=1
+/system_ext_image_b       emmc        /dev/block/mapper/system_ext_b                         flags=display="System_EXT Image B";flashimg=1
+/vendor_dlkm_image_b       emmc      /dev/block/mapper/vendor_dlkm_b                            flags=display="Vndor_dlkm Image B";flashimg=1
+/odm_image_b       emmc      /dev/block/mapper/odm_b                           flags=display="Odm Image B";flashimg=1
+
+
+/userdata_default             emmc           /dev/block/by-name/userdata                     flags=display="Userdata default";flashimg
+
+
+# Dynamic Partitions ( A Slots )
+
+
+
+
+# Removable storage
+/external_sd		auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1			flags=display="External SDcard";storage;wipeingui;removable;backup=0
+
+/usbotg				auto 		/dev/block/sda1 /dev/block/sda				flags=display="Usb-Otg";storage;wipeingui;removable;backup=0
+
+
+
+
+## Internal storage (for OrangeFox)
+#/storage            f2fs      /data/media/0                                                         flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable;
