@@ -10,25 +10,33 @@
 
 ---
 
-## 📱 Device Overview
-
-> [!NOTE]
-> Данный репозиторий содержит кастомное дерево устройства (Device Tree) для сборки софта, рекавери и прошивок на **Redmi A3x** (кодовое имя: `klein`).
-
-<br>
-
-| Характеристика | Параметр |
-| :--- | :--- |
-| 🏷️ **Модель** | Redmi A3x |
-| 🔤 **Кодовое имя** | `klein` |
-| 🧠 **Платформа** | Unisoc |
-| 👤 **Автор / Форк** | `Veniamin688` / KSN (leave fork network) |
+## 🌐 Language / Язык
+* [English](#-english)
+* [Русский](#-русский)
 
 ---
 
-## ⚙️ Quick Setup
+## 🇺🇸 English
 
-Клонируйте репозиторий в структуру ваших исходников (например, в директорию `device/xiaomi/klein`):
+### 📱 Device Overview
+
+> [!NOTE]
+> This repository contains a custom device tree for building software, recoveries, and custom ROMs for the **Redmi A3x** (codename: `klein`).
+
+<br>
+
+| Feature | Specification |
+| :--- | :--- |
+| 🏷️ **Model** | Redmi A3x |
+| 🔤 **Codename** | `klein` |
+| 🧠 **Platform** | Unisoc |
+| 👤 **Author / Fork** | `Veniamin688` / KSN (leave fork network) |
+
+---
+
+### ⚙️ Quick Setup
+
+Clone this repository into your source tree structure (e.g., into `device/xiaomi/klein`):
 
 ```bash
 git clone [https://github.com/Veniamin688/device_redmi_klein](https://github.com/Veniamin688/device_redmi_klein) device/xiaomi/klein
