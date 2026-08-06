@@ -22,10 +22,10 @@ To use this device tree, clone it into your local source tree structure:
 
 ```bash
 git clone [https://github.com/Veniamin688/device_redmi_klein](https://github.com/Veniamin688/device_redmi_klein) device/xiaomi/klein
+
 ```
+📂 Tree Structure
 ```
-```
-```📂 Tree Structure
 ```
 [!NOTE]
  Main configuration files included in this device tree:
