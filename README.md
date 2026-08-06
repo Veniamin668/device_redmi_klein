@@ -1,36 +1,34 @@
-# 🌲 Device Tree for Redmi A3x (`klein`)
-
 <div align="center">
 
-[![GitHub forks](https://img.shields.io/github/forks/Veniamin688/device_redmi_klein?style=flat-square&color=blue)](https://img.shields.io/github/forks/Veniamin688/device_redmi_klein)
-[![GitHub stars](https://img.shields.io/github/stars/Veniamin688/device_redmi_klein?style=flat-square&color=yellow)](https://img.shields.io/github/stars/Veniamin688/device_redmi_klein)
-[![Platform](https://img.shields.io/badge/Platform-Unisoc-orange?style=flat-square)](https://github.com/Veniamin688)
+# 🌲 Device Tree for Redmi A3x (`klein`)
+
+[![Maintainer](https://img.shields.io/badge/Maintainer-Veniamin688-blue?style=for-the-badge&logo=github)](https://github.com/Veniamin688)
+[![Platform](https://img.shields.io/badge/Platform-Unisoc-orange?style=for-the-badge&logo=android)](https://github.com/Veniamin688)
+[![Network](https://img.shields.io/badge/Network-leave%20fork%20network-purple?style=for-the-badge)](https://github.com/Veniamin688)
 
 </div>
 
 ---
 
-## 📱 Device Specifications
+## 📱 Device Overview
 
-| Feature | Spec |
+> [!NOTE]
+> Данный репозиторий содержит кастомное дерево устройства (Device Tree) для сборки софта, рекавери и прошивок на **Redmi A3x** (кодовое имя: `klein`).
+
+<br>
+
+| Характеристика | Параметр |
 | :--- | :--- |
-| **Device Name** | Redmi A3x |
-| **Codename** | `klein` |
-| **Platform** | Unisoc |
-| **Repository Type** | Custom Device Tree |
-| **Maintained By** | [Veniamin688](https://github.com/Veniamin688) (Forked by KSN / leave fork network) |
+| 🏷️ **Модель** | Redmi A3x |
+| 🔤 **Кодовое имя** | `klein` |
+| 🧠 **Платформа** | Unisoc |
+| 👤 **Автор / Форк** | `Veniamin688` / KSN (leave fork network) |
 
 ---
 
-## 🛠️ About
+## ⚙️ Quick Setup
 
-This repository contains the device tree configuration for building custom recoveries, ROMs, and other modifications for the **Redmi A3x** (`klein`). 
-
----
-
-## 📌 Usage
-
-To use this device tree in your workspace, clone it into your device directory:
+Клонируйте репозиторий в структуру ваших исходников (например, в директорию `device/xiaomi/klein`):
 
 ```bash
 git clone [https://github.com/Veniamin688/device_redmi_klein](https://github.com/Veniamin688/device_redmi_klein) device/xiaomi/klein
