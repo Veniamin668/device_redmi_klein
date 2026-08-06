@@ -21,7 +21,7 @@ Custom device tree workspace for building recoveries and custom ROMs for the **R
 To use this device tree, clone it into your local source tree structure:
 
 ```bash
-git clone [https://github.com/Veniamin688/device_redmi_klein](https://github.com/Veniamin688/device_redmi_klein) device/xiaomi/klein
+git clone https://github.com/Veniamin688/device_redmi_klein device/xiaomi/missi
 ```
 > [!WARNING]
 > Use this device tree at your own risk. The author is not responsible for any bricked devices or data loss.
