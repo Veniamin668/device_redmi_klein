@@ -22,18 +22,6 @@ To use this device tree, clone it into your local source tree structure:
 
 ```bash
 git clone [https://github.com/Veniamin688/device_redmi_klein](https://github.com/Veniamin688/device_redmi_klein) device/xiaomi/klein
-
 ```
-📂 Tree Structure
-
-[!NOTE]
- Main configuration files included in this device tree:
-
-BoardConfig.mk — Hardware architecture, partition sizes, and board-specific flags.
-
-device.mk — Packages, overlay configurations, and system properties.
-
-extract-files.sh — Script for extracting proprietary blobs from stock firmware.
-
- [!WARNING]
-    Use this device tree at your own risk. The author is not responsible for any bricked devices or data loss.
+> [!WARNING]
+> Use this device tree at your own risk. The author is not responsible for any bricked devices or data loss.
