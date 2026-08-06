@@ -25,8 +25,7 @@ git clone [https://github.com/Veniamin688/device_redmi_klein](https://github.com
 
 ```
 📂 Tree Structure
-```
-```
+
 [!NOTE]
  Main configuration files included in this device tree:
 
