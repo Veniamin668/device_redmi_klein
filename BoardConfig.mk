@@ -7,10 +7,6 @@
 
 DEVICE_PATH := device/xiaomi/missi
 
-# Прямая замена graphics_drm.cpp в исходниках TWRP
-$(shell if [ -f "$(DEVICE_PATH)/patch/graphics_drm.cpp" ]; then \
-    cp -f $(DEVICE_PATH)/patch/graphics_drm.cpp bootable/recovery/minui/graphics_drm.cpp; \
-fi)
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
