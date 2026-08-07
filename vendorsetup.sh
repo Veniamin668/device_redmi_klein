@@ -3,7 +3,7 @@
 DEVICE_PATH="device/xiaomi/missi"
 
 echo "===================================================="
-echo "           UNISOC PATCHER FOR REDMI A3X 
+echo "   🔥 ULTIMATE UNISOC PATCHER FOR REDMI A3X 🔥     "
 echo "===================================================="
 
 # --- 1. Наш графический фикс (прямая замена) ---
