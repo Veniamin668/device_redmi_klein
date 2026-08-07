@@ -6,19 +6,11 @@
 #
 
 DEVICE_PATH := device/xiaomi/missi
-# Автоматическая замена всех .cpp файлов из папки patch в исходники TWRP
-$(shell if [ -d "$(DEVICE_PATH)/patch" ]; then \
-    for f in $(DEVICE_PATH)/patch/*.cpp; do \
-        if [ -f "$$f" ]; then \
-            filename=$$(basename "$$f"); \
-            target=$$(find . -type f -name "$$filename" -not -path "*/$(DEVICE_PATH)/*" | head -n 1); \
-            if [ ! -z "$$target" ]; then \
-                cp -f "$$f" "$$target"; \
-            fi; \
-        fi; \
-    done; \
-fi)
 
+# Прямая замена graphics_drm.cpp в исходниках TWRP
+$(shell if [ -f "$(DEVICE_PATH)/patch/graphics_drm.cpp" ]; then \
+    cp -f $(DEVICE_PATH)/patch/graphics_drm.cpp bootable/recovery/minui/graphics_drm.cpp; \
+fi)
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
