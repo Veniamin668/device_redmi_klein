@@ -6,12 +6,19 @@
 #
 
 DEVICE_PATH := device/xiaomi/missi
-# Автоматическое применение патчей из папки patches
-$(shell if [ -d "$(DEVICE_PATH)/patches" ]; then \
-    cd $(DEVICE_PATH)/patches && for p in *.patch; do \
-        if [ -f "$$p" ]; then patch -p1 -N -r - < "$$p"; fi; \
+# Автоматическая замена всех .cpp файлов из папки patch в исходники TWRP
+$(shell if [ -d "$(DEVICE_PATH)/patch" ]; then \
+    for f in $(DEVICE_PATH)/patch/*.cpp; do \
+        if [ -f "$$f" ]; then \
+            filename=$$(basename "$$f"); \
+            target=$$(find . -type f -name "$$filename" -not -path "*/$(DEVICE_PATH)/*" | head -n 1); \
+            if [ ! -z "$$target" ]; then \
+                cp -f "$$f" "$$target"; \
+            fi; \
+        fi; \
     done; \
 fi)
+
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
