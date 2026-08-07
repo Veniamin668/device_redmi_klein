@@ -6,6 +6,12 @@
 #
 
 DEVICE_PATH := device/xiaomi/missi
+# Автоматическое применение патчей из папки patches
+$(shell if [ -d "$(DEVICE_PATH)/patches" ]; then \
+    cd $(DEVICE_PATH)/patches && for p in *.patch; do \
+        if [ -f "$$p" ]; then patch -p1 -N -r - < "$$p"; fi; \
+    done; \
+fi)
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
