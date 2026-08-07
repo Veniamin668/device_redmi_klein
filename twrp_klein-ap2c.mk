@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/missi/device.mk)
 
 PRODUCT_DEVICE := missi
-PRODUCT_NAME := twrp_klein
+PRODUCT_NAME := twrp_klein-ap2c
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := missi
 PRODUCT_MANUFACTURER := xiaomi
