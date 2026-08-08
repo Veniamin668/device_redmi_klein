@@ -55,7 +55,7 @@
 #include <xf86drm.h>
 #include <xf86drmMode.h>
 
-#include "include/minui.h"
+#include "include/minui/minui.h"
 #include "graphics.h"
 // #include <pixelflinger/pixelflinger.h>
 
