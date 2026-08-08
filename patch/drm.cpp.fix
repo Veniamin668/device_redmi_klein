@@ -57,7 +57,7 @@
 
 #include "include/minui/minui.h"
 #include "graphics.h"
-// #include <pixelflinger/pixelflinger.h>
+#include <include/pixelflinger/pixelflinger.h>
 
 #define ARRAY_SIZE(A) (sizeof(A)/sizeof(*(A)))
 
