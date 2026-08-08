@@ -28,5 +28,10 @@ To use this device tree, clone it into your local source tree structure:
 git clone https://github.com/Veniamin688/device_redmi_klein device/xiaomi/missi
 ```
 
+> [!TIP]
+> **Graphics Backend Notice:** 
+> The built-in Linux framebuffer is used in DRM legacy mode. The old, incompatible patch found in the `patch` folder is completely disabled and not utilized in this build.
+
+
 > [!WARNING]
 > Use this device tree at your own risk. The author is not responsible for any bricked devices or data loss.
