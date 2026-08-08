@@ -129,8 +129,14 @@ BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
 BOARD_USES_UNISOC_HARDWARE := true
 TARGET_BOARD_PLATFORM := sc9863a
 
-TARGET_RECOVERY_CFLAGS += -w -Wno-error
+# Ядерные флаги компилятора для легаси графики Unisoc
+TARGET_RECOVERY_CFLAGS += -w -Wno-error -Wno-unused-parameter
 TARGET_RECOVERY_CPPFLAGS += -w -Wno-error -fpermissive
+
+# МАКРОСЫ ДЛЯ АВТО-ТРАНСЛЯЦИИ СИ В C++ (Подменяем .data на .data() для компилятора)
+TARGET_RECOVERY_CFLAGS += -D"data=data()"
+TARGET_RECOVERY_CPPFLAGS += -D"data=data()"
+
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
