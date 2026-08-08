@@ -133,10 +133,12 @@ TARGET_BOARD_PLATFORM := sc9863a
 TARGET_RECOVERY_CFLAGS += -w -Wno-error -Wno-unused-parameter
 TARGET_RECOVERY_CPPFLAGS += -w -Wno-error -fpermissive
 
-# МАКРОСЫ ДЛЯ АВТО-ТРАНСЛЯЦИИ СИ В C++ (Подменяем .data на .data() для компилятора)
-TARGET_RECOVERY_CFLAGS += -D"data=data()"
-TARGET_RECOVERY_CPPFLAGS += -D"data=data()"
+# Принудительно отключаем компиляцию atomic DRM, который ломает Unisoc
+TW_TARGET_USES_QCOM_BSP := false
+TARGET_USES_HWC2 := false
 
+# Заставляем minui работать через стандартный Linux Framebuffer / Legacy DRM
+RECOVERY_GRAPHICS_FORCE_USE_LINUX_FB := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
