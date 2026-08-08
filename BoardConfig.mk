@@ -130,8 +130,8 @@ BOARD_USES_UNISOC_HARDWARE := true
 TARGET_BOARD_PLATFORM := sc9863a
 
 # Ядерные флаги компилятора для легаси графики Unisoc
-TARGET_RECOVERY_CFLAGS += -w -Wno-error -Wno-unused-parameter
-TARGET_RECOVERY_CPPFLAGS += -w -Wno-error -fpermissive
+TARGET_RECOVERY_CFLAGS += -w -Wno-error -Wno-unused-parameter -Wno-abstract-vbase-init
+TARGET_RECOVERY_CPPFLAGS += -w -Wno-error -fpermissive -Wno-abstract-vbase-init
 
 # Принудительно отключаем компиляцию atomic DRM, который ломает Unisoc
 TW_TARGET_USES_QCOM_BSP := false
