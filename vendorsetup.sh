@@ -38,4 +38,11 @@ if [ -f "$DEVICE_PATH/patch/vold_recovery_fscrypt_keyring.patch" ]; then
     git apply "$DEVICE_PATH/patch/vold_recovery_fscrypt_keyring.patch" && echo "[+] Применен vold fscrypt patch!"
 fi
 
+# Вырезаем ручное выделение памяти, которое ломает C++ линковщик в Redmi A3x
+if [ -f "bootable/recovery/minui/graphics_drm.cpp" ]; then
+    echo "[*] Авто-фикс структуры памяти draw_buf..."
+    sed -i 's|draw_buf->data = (unsigned char \*)calloc|// draw_buf->data =|g' bootable/recovery/minui/graphics_drm.cpp
+    sed -i 's|if (!draw_buf->data)|// if (!draw_buf->data)|g' bootable/recovery/minui/graphics_drm.cpp
+fi
+
 echo "===================================================="
