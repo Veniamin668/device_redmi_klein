@@ -6,6 +6,12 @@ echo "===================================================="
 echo "   🔥 ULTIMATE UNISOC PATCHER FOR REDMI A3X 🔥     "
 echo "===================================================="
 
+--- 1. Наш графический фикс (прямая DRM) ---
+if [ -f "$DEVICE_PATH/patch/graphics_drm.cpp.sprd_legacy_kms_fixed" ]; then
+    echo "[*] Применение C++ DRM фикса графики..."
+    cp -f "$DEVICE_PATH/patch/fix_drm.cpp" bootable/recovery/minui/graphics_drm.cpp
+fi
+
 # --- 2. Авто-применение системных патчей через git apply ---
 echo "[*] Проверка и применение системных патчей..."
 
