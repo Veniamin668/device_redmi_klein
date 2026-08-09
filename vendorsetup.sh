@@ -16,10 +16,10 @@ if [ -f "$DEVICE_PATH/patch/libcxx_verbose_abort.patch" ]; then
 fi
 
 # Фикс тем рекавери
-if [ -f "$DEVICE_PATH/patch/pbrp_theme_xml.patch" ]; then
-    git apply --check "$DEVICE_PATH/patch/pbrp_theme_xml.patch" &>/dev/null && \
-    git apply "$DEVICE_PATH/patch/pbrp_theme_xml.patch" && echo "[+] Применен theme patch!"
-fi
+#if [ -f "$DEVICE_PATH/patch/pbrp_theme_xml.patch" ]; then
+#    git apply --check "$DEVICE_PATH/patch/pbrp_theme_xml.patch" &>/dev/null && \
+#    git apply "$DEVICE_PATH/patch/pbrp_theme_xml.patch" && echo "[+] Применен theme patch!"
+#fi
 
 
 # Вырезаем ручное выделение памяти, которое ломает C++ линковщик в Redmi A3x
