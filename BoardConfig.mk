@@ -59,7 +59,7 @@ TARGET_SCREEN_DENSITY := 400
 
 # MKBOOTIMG from original vendor_boot 
 BOARD_VENDOR_BASE := 0x00000000
-BOARD_VENDOR_CMDLINE := ttyS1,115200n8 bootconfig bootconfig
+BOARD_VENDOR_CMDLINE := ttyS1,115200n8 androidboot.selinux=permissive bootconfig bootconfig
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x05400000
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -173,7 +173,7 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone0/temp
 TW_DEFAULT_BRIGHTNESS := 1200
 
 #MAINTENER
-TW_DEVICE_VERSION := klein | ktoya? | Kirill Nekrasov Pro
+TW_DEVICE_VERSION := klein | ktoya? | GimmeCat | Creator KSN
 
 # INCLUDE TWRP CONFIG
 TW_INCLUDE_REPACKTOOLS := true
@@ -204,10 +204,8 @@ TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
 
 # Разрешаем ядру искать прошивки в ramdisk рекавери
 TARGET_RECOVERY_DEVICE_MODULES += firmware
-BOARD_ROOT_EXTRA_FOLDERS += lib/firmware
+BOARD_ROOT_EXTRA_FOLDERS += lib/firmware vendor/firmware odm/firmware
 
-#попытка фиксануть адб
-TARGET_DISABLE_TRIPLE_BUFFERING := true
 
 #additional lib for fix decryption
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
@@ -216,5 +214,11 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libdm \
     $(TARGET_OUT_SHARED_LIBRARIES)/liblp \
     $(TARGET_OUT_SHARED_LIBRARIES)/libext2_uuid \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libprotobuf-cpp-lite
+    $(TARGET_OUT_SHARED_LIBRARIES)/libprotobuf-cpp-lite \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4support \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster_messages \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libsoftkeymaster \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libcrypto \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper
+
 

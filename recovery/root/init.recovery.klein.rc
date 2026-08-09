@@ -63,6 +63,12 @@ start boot-hal-1-2
 start health-hal-2-1
 start vendor.health-default
 
+service fastbootd /system/bin/fastbootd
+    disabled
+    seclabel u:r:fastbootd:s0
+
+on property:sys.usb.config=fastboot
+    start fastbootd
  
  #### THIS IS FROM INIT RECOVERY COMMMON
 

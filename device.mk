@@ -69,6 +69,8 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
-# Копирование прошивок тачскрина для работы в рекавери
+# Принудительное копирование прошивок тача во все возможные точки опроса ядра
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/firmware,recovery/root/lib/firmware)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/firmware,recovery/root/lib/firmware) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/firmware,recovery/root/vendor/firmware) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/firmware,recovery/root/odm/firmware)
