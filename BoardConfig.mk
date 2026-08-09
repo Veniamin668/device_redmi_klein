@@ -173,7 +173,7 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone0/temp
 TW_DEFAULT_BRIGHTNESS := 1200
 
 #MAINTENER
-TW_DEVICE_VERSION := klein | ktoya? | GimmeCat | КОСЫНКА
+TW_DEVICE_VERSION := klein | ktoya? | GimmeCat | КОСЫНКА | ХУЙ,ДЕНЬГИ,ЖОПА
 
 # INCLUDE TWRP CONFIG
 TW_INCLUDE_REPACKTOOLS := true
