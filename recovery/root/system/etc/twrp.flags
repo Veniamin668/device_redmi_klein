@@ -25,6 +25,7 @@
 /persist emmc /dev/block/by-name/persist flags=display="Persist";flashimg
 /logo emmc /dev/block/by-name/logo flags=display="logo";
 /fbootlogo emmc /dev/block/by-name/fbootlogo flags=display="fbootlogo"
+/tranfs ext4 /dev/block/by-name/tranfs flags=display="tranfs"
 /miscdata emmc /dev/block/by-name/miscdata flags=display="miscdata"
 
 
@@ -46,8 +47,6 @@
 
 
 /userdata_default             emmc           /dev/block/by-name/userdata                     flags=display="Userdata default";flashimg
-#/data          f2fs      /dev/block/by-name/userdata                     flags=display="Internal Storage";backup=1;settingsstorage;wipeui
-#/data          ext4      /dev/block/by-name/userdata                     flags=display="Internal Storage";backup=1;settingsstorage;wipeui
 
 
 # Dynamic Partitions ( A Slots )
