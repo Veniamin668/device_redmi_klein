@@ -71,6 +71,4 @@ PRODUCT_PACKAGES += \
 
 # Копирование прошивок тачскрина для работы в рекавери
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
-    system/core/fastboot/res/images/charger_no_battery.png:root/res/images/charger_no_battery.png
-
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
