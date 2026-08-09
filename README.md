@@ -4,6 +4,7 @@
 
 [![Maintainer](https://img.shields.io/badge/Maintainer-Veniamin688-blue?style=for-the-badge&logo=github)](https://github.com/Veniamin688)
 [![Platform](https://img.shields.io/badge/Platform-Unisoc-orange?style=for-the-badge&logo=android)](https://www.unisoc,com)
+[![Creator](https://img.shields.io/badge/Maintainer-KSN2redawew-red?style=for-the-badge&logo=github)](https://github.com/KSN2redawew)
 
 </div>
 
