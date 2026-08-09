@@ -21,16 +21,6 @@ if [ -f "$DEVICE_PATH/patch/pbrp_theme_xml.patch" ]; then
     git apply "$DEVICE_PATH/patch/pbrp_theme_xml.patch" && echo "[+] Применен theme patch!"
 fi
 
-# Фиксы шифрования даты (vold)
-if [ -f "$DEVICE_PATH/patch/vold_android15_keyblob.patch" ]; then
-    git apply --check "$DEVICE_PATH/patch/vold_android15_keyblob.patch" &>/dev/null && \
-    git apply "$DEVICE_PATH/patch/vold_android15_keyblob.patch" && echo "[+] Применен vold keyblob patch!"
-fi
-
-if [ -f "$DEVICE_PATH/patch/vold_recovery_fscrypt_keyring.patch" ]; then
-    git apply --check "$DEVICE_PATH/patch/vold_recovery_fscrypt_keyring.patch" &>/dev/null && \
-    git apply "$DEVICE_PATH/patch/vold_recovery_fscrypt_keyring.patch" && echo "[+] Применен vold fscrypt patch!"
-fi
 
 # Вырезаем ручное выделение памяти, которое ломает C++ линковщик в Redmi A3x
 if [ -f "bootable/recovery/minui/graphics_drm.cpp" ]; then
