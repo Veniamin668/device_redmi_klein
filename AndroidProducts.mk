@@ -6,4 +6,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_klein_stable.mk
+    $(LOCAL_DIR)/twrp_klein-ap2c.mk
