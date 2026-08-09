@@ -204,7 +204,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
 
 # Разрешаем ядру искать прошивки в ramdisk рекавери
 TARGET_RECOVERY_DEVICE_MODULES += firmware
-BOARD_ROOT_EXTRA_FOLDERS += lib/firmware vendor/firmware etc/firmware
+BOARD_ROOT_EXTRA_FOLDERS += lib/firmware
 
 #попытка фиксануть адб
 TARGET_DISABLE_TRIPLE_BUFFERING := true
