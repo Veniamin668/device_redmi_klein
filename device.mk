@@ -71,4 +71,4 @@ PRODUCT_PACKAGES += \
 
 # Копирование прошивок тачскрина для работы в рекавери
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/firmware,recovery/root/lib/firmware)
