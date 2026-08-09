@@ -206,6 +206,9 @@ TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
 TARGET_RECOVERY_DEVICE_MODULES += firmware
 BOARD_ROOT_EXTRA_FOLDERS += lib/firmware vendor/firmware etc/firmware
 
+#попытка фиксануть адб
+TARGET_DISABLE_TRIPLE_BUFFERING := true
+
 #additional lib for fix decryption
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libtrusty \
