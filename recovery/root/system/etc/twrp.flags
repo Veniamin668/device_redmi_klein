@@ -45,9 +45,9 @@
 /odm_image_b       emmc      /dev/block/mapper/odm_b                           flags=display="Odm Image B";flashimg=1
 
 
-#/userdata_default             emmc           /dev/block/by-name/userdata                     flags=display="Userdata default";flashimg
-/data          f2fs      /dev/block/by-name/userdata                     flags=display="Internal Storage";backup=1;settingsstorage;wipeui
-/data          ext4      /dev/block/by-name/userdata                     flags=display="Internal Storage";backup=1;settingsstorage;wipeui
+/userdata_default             emmc           /dev/block/by-name/userdata                     flags=display="Userdata default";flashimg
+#/data          f2fs      /dev/block/by-name/userdata                     flags=display="Internal Storage";backup=1;settingsstorage;wipeui
+#/data          ext4      /dev/block/by-name/userdata                     flags=display="Internal Storage";backup=1;settingsstorage;wipeui
 
 
 # Dynamic Partitions ( A Slots )
