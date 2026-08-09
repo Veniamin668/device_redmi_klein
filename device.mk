@@ -64,3 +64,8 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
+
+# Копирование прошивок тачскрина для работы в рекавери
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
+
