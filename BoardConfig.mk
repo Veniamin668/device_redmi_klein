@@ -202,6 +202,10 @@ TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
     $(TARGET_OUT_EXECUTABLES)/fastbootd \
     $(TARGET_OUT_SYSTEM_EXT_EXECUTABLES)/can_init
 
+# Разрешаем ядру искать прошивки в ramdisk рекавери
+TARGET_RECOVERY_DEVICE_MODULES += firmware
+BOARD_ROOT_EXTRA_FOLDERS += lib/firmware vendor/firmware etc/firmware
+
 #additional lib for fix decryption
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libtrusty \
