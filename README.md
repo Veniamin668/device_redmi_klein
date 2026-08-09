@@ -3,7 +3,7 @@
 # 🌲 Device Tree for Redmi A3x (`klein`)
 
 [![Maintainer](https://img.shields.io/badge/Maintainer-Veniamin688-blue?style=for-the-badge&logo=github)](https://github.com/Veniamin688)
-[![Platform](https://img.shields.io/badge/Platform-Unisoc-violet?style=for-the-badge&logo=android)](https://www.unisoc.com)
+[![Platform](https://img.shields.io/badge/Platform-Unisoc-pink?style=for-the-badge&logo=android)](https://www.unisoc.com)
 [![Creator](https://img.shields.io/badge/Creator-KSN2redawew-red?style=for-the-badge&logo=git)](https://github.com/KSN2redawew)
 
 </div>
