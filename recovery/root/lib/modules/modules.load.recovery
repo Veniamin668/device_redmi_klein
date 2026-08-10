@@ -62,7 +62,7 @@ sbuf_bridge.ko
 sblock_bridge.ko
 sprd_wdt_fiq.ko
 sprd_7sreset.ko
-native_hang_monitor.ko
+# native_hang_monitor.ko
 spi-sprd.ko
 unisoc_mm_emem.ko
 sprd-dma.ko
