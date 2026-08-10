@@ -105,6 +105,9 @@ on boot
     chmod 0644 /lib/firmware/novatek_ts_truly_fw.bin
 
 
+    # Unisoc MUSB does not always export ro.boot.usbcontroller in recovery.
+    # Without this, writing an empty UDC keeps musb-sprd in "waiting musb udc start".
+    setprop sys.usb.controller 20200000.usb
     setprop sys.usb.configfs 1
     setprop sys.usb.config adb
     write /sys/block/mmcblk0boot0/force_ro 0
