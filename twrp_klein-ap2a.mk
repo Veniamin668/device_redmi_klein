@@ -17,5 +17,4 @@ PRODUCT_NAME := twrp_klein
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := missi
 PRODUCT_MANUFACTURER := xiaomi
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
