@@ -172,8 +172,8 @@ TW_MAX_BRIGHTNESS := 2047
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone0/temp
 TW_DEFAULT_BRIGHTNESS := 1200
 
-#MAINTENER
-TW_DEVICE_VERSION := klein | ktoya? | GimmeCat | КОСЫНКА | ХУЙ,ДЕНЬГИ
+# Maintainer / build tag shown in the recovery header.
+TW_DEVICE_VERSION := klein-unisoc-test
 
 # INCLUDE TWRP CONFIG
 TW_INCLUDE_REPACKTOOLS := true
@@ -220,5 +220,4 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libsoftkeymaster \
     $(TARGET_OUT_SHARED_LIBRARIES)/libcrypto \
     $(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper
-
 

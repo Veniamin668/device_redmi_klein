@@ -18,28 +18,54 @@ else
 	exit 1
 fi
 
-if [ -f $cfg_file ]; then
+case "$cfg_file" in
+	/*/modules.load*)
+		module_dir="${cfg_file%/*}" ;;
+	*)
+		module_dir=/vendor/lib/modules ;;
+esac
+
+load_module()
+{
+	module="$1"
+
+	[ -n "$module" ] || return
+	case "$module" in
+		\#*) return ;;
+	esac
+
+	modprobe -s -a -d "$module_dir" "$module" 2>/dev/null || \
+		insmod "$module_dir/$module" 2>/dev/null || \
+		insmod "/vendor/lib/modules/$module" 2>/dev/null || \
+		insmod "/lib/modules/$module" 2>/dev/null
+}
+
+if [ -f "$cfg_file" ]; then
 	while IFS="|" read -r action arg
 	do
-		args=`echo $arg | sed 's/|/ /g'`
-		case $action in
+		args="$(echo "$arg" | sed 's/|/ /g')"
+		case "$action" in
+			"" | \#*) ;;
+			*.ko) load_module "$action" ;;
 			"insmod") insmod $args ;;
-			"setprop") setprop $arg 1 ;;
-			"enable") echo 1 > $arg ;;
+			"setprop") setprop "$arg" 1 ;;
+			"enable") echo 1 > "$arg" ;;
 			"modprobe")
-				case $(arg) in
-					"-b *" | "-b")
-						arg="-b $(cat /vendor/lib/modules/modules.load$bootmode)" ;;
-					 "*"|"")
-						arg="$(cat /vendor/lib/modules/modules.load$bootmode)" ;;
+				case "$arg" in
+					"-b "* | "-b")
+						arg="-b $(cat "$module_dir/modules.load$bootmode")" ;;
+					"*"|"")
+						arg="$(cat "$module_dir/modules.load$bootmode")" ;;
 				esac
-				modprobe -s -a -d /vendor/lib/modules $arg ;;
+				modprobe -s -a -d "$module_dir" $arg ;;
 			"modprobe_gki_modules")
-				case $(arg) in
-					 "*"|"")
+				case "$arg" in
+					"*"|"")
 						arg="$(cat /system/lib/modules/modules.load)" ;;
 				esac
 				modprobe -s -a -d /system/lib/modules $arg ;;
 		esac
-	done < $cfg_file
+	done < "$cfg_file"
 fi
+
+setprop vendor.all.modules.ready 1
