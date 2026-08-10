@@ -2,7 +2,7 @@ on init
     # Loading kernel modules in background
     start insmod_sh
     
-service insmod_sh /vendor/bin/init.insmod.sh /lib/modules/modules.load.recovery recovery
+service insmod_sh /vendor/bin/init.insmod.sh
     class main
     user root
     group root system

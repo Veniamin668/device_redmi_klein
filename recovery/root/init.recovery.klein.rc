@@ -1,7 +1,16 @@
 # hi im zyrexen ;)
 import /init.recovery.common.rc
-import /init.custom.rc
 
+
+on init
+    start recovery_modules
+
+service recovery_modules /vendor/bin/init.recovery.modules.sh /lib/modules/modules.load.recovery recovery
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
 
 on fs
 start prepdecrypt 
