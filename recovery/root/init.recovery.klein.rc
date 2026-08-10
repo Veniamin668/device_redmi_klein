@@ -1,5 +1,6 @@
 # hi im zyrexen ;)
 import /init.recovery.common.rc
+import /init.custom.rc
 
 
 on fs
@@ -71,4 +72,3 @@ on property:sys.usb.config=fastboot
     start fastbootd
  
  #### THIS IS FROM INIT RECOVERY COMMMON
-
