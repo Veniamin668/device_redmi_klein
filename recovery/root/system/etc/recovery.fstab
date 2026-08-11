@@ -15,3 +15,11 @@ odm                     /odm            erofs  ro                               
 /dev/block/by-name/misc         /misc          emmc  defaults                                                     defaults
 /dev/block/by-name/vendor_boot  /vendor_boot   emmc  defaults                                                     slotselect
 /dev/block/by-name/cache        /cache         ext4  noatime,nosuid,nodev                                         wait,check,formattable
+
+# fix Reboot system
+/dev/block/mmcblk0boot0                  /spl                emmc    defaults slotselect
+/dev/block/mmcblk0boot1                  /spl_bk             emmc    defaults defaults
+/dev/block/by-name/uboot                 /uboot              emmc    defaults slotselect
+/dev/block/by-name/sml                   /sml                emmc    defaults slotselect
+/dev/block/by-name/trustos               /tos                emmc    defaults slotselect
+/dev/block/by-name/teecfg                /teecfg             emmc    defaults slotselect
