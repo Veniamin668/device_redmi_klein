@@ -29,7 +29,6 @@ PRODUCT_PACKAGES += \
     bootctrl.recovery  \
     unisoc.bootctrl
 
-
 PRODUCT_PACKAGES += \
     bootctrl.ums9230 \
     android.hardware.fastboot@1.1-impl-mock \
@@ -40,18 +39,18 @@ PRODUCT_PACKAGES += \
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
-
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+	
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl.ums9230
+	
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
     update_verifier \
     update_engine_sideload
-
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -62,15 +61,8 @@ AB_OTA_UPDATER := true
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 33
 PRODUCT_SHIPPING_API_LEVEL := 32
+
 # A/B
-
-
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
-
-# Принудительное копирование прошивок тача во все возможные точки опроса ядра
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/firmware,recovery/root/lib/firmware) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/firmware,recovery/root/vendor/firmware) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root/lib/firmware,recovery/root/odm/firmware)

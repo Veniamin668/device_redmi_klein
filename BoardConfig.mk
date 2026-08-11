@@ -196,12 +196,6 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TWRP_EVENT_LOGGING := true
 
-#Fix fastbootd
-TW_EXCLUDE_LPDUMP := false
-TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += \
-    $(TARGET_OUT_EXECUTABLES)/fastbootd \
-    $(TARGET_OUT_SYSTEM_EXT_EXECUTABLES)/can_init
-
 # Разрешаем ядру искать прошивки в ramdisk рекавери
 TARGET_RECOVERY_DEVICE_MODULES += firmware
 BOARD_ROOT_EXTRA_FOLDERS += lib/firmware vendor/firmware odm/firmware
