@@ -18,7 +18,7 @@
 | **Codename** | `klein` |
 | **Platform** | Unisoc |
 | **Maintainer** | [Veniamin688](https://github.com/Veniamin688) |
-| **Original DT** | [KOSINKA](https://github.com/KSN2redawew/android_device_redmi_klein-twrp) |
+| **Original DT** | [KSN2redawew](https://github.com/KSN2redawew/android_device_redmi_klein-twrp) |
 
 ---
 
