@@ -173,7 +173,7 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone0/temp
 TW_DEFAULT_BRIGHTNESS := 1200
 
 # Maintainer / build tag shown in the recovery header.
-TW_DEVICE_VERSION := klein | ktoya? | GimmeCat | KSN
+TW_DEVICE_VERSION := klein | ktoya? | GimmeCat | КОСЫНКА | ХУЙ ЖОПА ДЕНЬГИ
 
 # INCLUDE TWRP CONFIG
 TW_INCLUDE_REPACKTOOLS := true
