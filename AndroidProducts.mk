@@ -6,4 +6,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_klein.mk
+    $(LOCAL_DIR)/fox_klein.mk
